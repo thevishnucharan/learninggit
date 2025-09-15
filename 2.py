@@ -5,6 +5,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Flowable, Image
 
+
 class HorizontalLine(Flowable):
     """A custom horizontal line for separating sections."""
     def __init__(self, width=500, thickness=1, color=colors.black):
