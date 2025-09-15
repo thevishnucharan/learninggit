@@ -5,7 +5,6 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Flowable, Image
 
-
 class HorizontalLine(Flowable):
     """A custom horizontal line for separating sections."""
     def __init__(self, width=500, thickness=1, color=colors.black):
@@ -18,7 +17,6 @@ class HorizontalLine(Flowable):
         self.canv.setStrokeColor(self.color)
         self.canv.setLineWidth(self.thickness)
         self.canv.line(0, 0, self.width, 0)
-
 
 def create_pdf(name, email, phone, about, education, skills, cert, link, interests, job_history, photo_path, pdf_filename):
     styles = getSampleStyleSheet()
@@ -250,7 +248,6 @@ class ResumeBuilderGUI:
         if pdf_filename:
             create_pdf(name, email, phone, about, self.education, self.skills, self.certificates, self.links, self.interests, self.jobs, self.photo_path, pdf_filename)
             print(f"Resume saved as {pdf_filename}")
-
 
 if __name__ == "__main__":
     root = tk.Tk()
